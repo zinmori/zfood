@@ -23,7 +23,7 @@ export default function Checkout() {
     error,
     sendRequest,
     clearData,
-  } = useHttp('http://localhost:3000/orders', requestConfig);
+  } = useHttp('https://foodbackend-z.vercel.app/orders', requestConfig);
 
   const cartTotal = cartCtx.items.reduce(
     (acc, item) => acc + item.price * item.quantity,
