@@ -12,10 +12,7 @@ export default function MealItem({ meal }) {
   return (
     <li className="meal-item">
       <article>
-        <img
-          src={`https://foodbackend-z.vercel.app/${meal.image}`}
-          alt={meal.name}
-        />
+        <img src={meal.image} alt={meal.name} />
         <div>
           <h3>{meal.name}</h3>
           <p className="meal-item-price">
