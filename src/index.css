@@ -1,3 +1,5 @@
+/* Default styles */
+/* Default styles */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
 
 * {
@@ -15,10 +17,16 @@ body {
 }
 
 #main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
+  padding: 1rem 10%;
+  background-color: #1d1a16;
+  z-index: 999;
 }
 
 #main-header #title {
@@ -267,5 +275,56 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+
+  /* Adjust styles for screens smaller than 768px */
+  #main-header {
+    padding: 1rem 5%;
+  }
+
+  #main-header #title {
+    gap: 0.5rem;
+  }
+
+  #main-header #title img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #meals {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+
+  .meal-item img {
+    height: 15rem;
+  }
+
+  .meal-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .meal-item-price {
+    font-size: 0.8rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .cart-total {
+    font-size: 1rem;
+  }
+
+  .control input {
+    max-width: 15rem;
+  }
+
+  .button {
+    padding: 0.3rem 1rem;
   }
 }
